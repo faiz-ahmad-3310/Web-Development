@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        background: #ffffff;
+        width: 380px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .input-group input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 5px rgba(102,126,234,0.6);
+    }
+
+    .gender-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    .gender-group label {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .login-link {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .login-link a {
+        text-decoration: none;
+        color: #667eea;
+        font-weight: bold;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Create Account</h2>
+    <form>
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Create password" required>
+        </div>
+
+        <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm password" required>
+        </div>
+
+        <div class="input-group">
+            <label>Gender</label>
+            <div class="gender-group">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+                <label><input type="radio" name="gender"> Other</label>
+            </div>
+        </div>
+
+        <button class="btn" type="submit">Register</button>
+
+        <div class="login-link">
+            Already have an account? <a href="#">Login</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

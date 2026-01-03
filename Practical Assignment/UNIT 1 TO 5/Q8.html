@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Price Calculator</title>
+</head>
+<body>
+
+<h2>Ticket Price Calculator</h2>
+
+<input type="number" id="age" placeholder="Enter your age">
+<br><br>
+
+<button onclick="calculatePrice()">Check Ticket Price</button>
+
+<p id="price"></p>
+
+<script>
+function calculatePrice() {
+    let age = parseInt(document.getElementById("age").value);
+    let ticketPrice;
+
+    if (age < 0 || isNaN(age)) {
+        ticketPrice = "Invalid age";
+    } 
+    else if (age < 12) {
+        ticketPrice = "Ticket Price: ₹100";
+    } 
+    else if (age < 18) {
+        ticketPrice = "Ticket Price: ₹150";
+    } 
+    else if (age < 60) {
+        ticketPrice = "Ticket Price: ₹300";
+    } 
+    else {
+        ticketPrice = "Ticket Price: ₹200";
+    }
+
+    document.getElementById("price").innerText = ticketPrice;
+}
+</script>
+
+</body>
+</html>

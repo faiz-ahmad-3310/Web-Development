@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discount Calculator</title>
+</head>
+<body>
+
+<h2>Discount Calculator</h2>
+
+<input type="number" id="amount" placeholder="Enter purchase amount (₹)">
+<br><br>
+
+<button onclick="calculateDiscount()">Calculate Discount</button>
+
+<p id="result"></p>
+
+<script>
+function calculateDiscount() {
+    let amount = parseInt(document.getElementById("amount").value);
+    let discount = 0;
+
+    if (isNaN(amount) || amount < 0) {
+        document.getElementById("result").innerText = "Invalid amount";
+        return;
+    }
+
+    if (amount >= 100) {
+        discount = 20;
+    } else if (amount >= 50) {
+        discount = 10;
+    } else {
+        discount = 0;
+    }
+
+    document.getElementById("result").innerText =
+        "Discount: ₹" + discount + 
+        " | Final Price: ₹" + (amount - discount);
+}
+</script>
+
+</body>
+</html>

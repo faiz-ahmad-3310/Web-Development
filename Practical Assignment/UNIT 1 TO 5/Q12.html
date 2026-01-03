@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+</head>
+<body>
+
+<h2>Number Guessing Game</h2>
+
+<p>Guess the secret number (1 to 10)</p>
+
+<input type="number" id="guess" placeholder="Enter your guess">
+<br><br>
+
+<button onclick="checkGuess()">Submit Guess</button>
+
+<p id="result"></p>
+
+<script>
+    
+    let secretNumber = 7;
+
+    function checkGuess() {
+        let userGuess = parseInt(document.getElementById("guess").value);
+        let message = "";
+
+        if (isNaN(userGuess)) {
+            message = "Please enter a number.";
+        }
+        else if (userGuess > secretNumber) {
+            message = "Too high! Try again.";
+        }
+        else if (userGuess < secretNumber) {
+            message = "Too low! Try again.";
+        }
+        else {
+            message = "🎉 Correct! You guessed the number.";
+        }
+
+        document.getElementById("result").innerText = message;
+    }
+</script>
+
+</body>
+</html>
