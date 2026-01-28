@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positive, Negative or Zero</title>
+</head>
+<body>
+
+<h2>Check Number (Ternary Operator)</h2>
+
+<input type="number" id="num" placeholder="Enter a number">
+<br><br>
+
+<button onclick="checkNumber()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function checkNumber() {
+    let n = parseInt(document.getElementById("num").value);
+
+    let output = (n > 0) ? "Positive Number"
+                : (n < 0) ? "Negative Number"
+                : "Zero";
+
+    document.getElementById("result").innerText = output;
+}
+</script>
+
+</body>
+</html>

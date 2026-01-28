@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faiz Ahmad | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+body{
+    font-family:Segoe UI, sans-serif;
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(2,6,23,0.75);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    z-index:1000;
+}
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#60a5fa;
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+.nav-links li{
+    margin-left:30px;
+}
+.nav-links a{
+    position:relative;
+    text-decoration:none;
+    color:#e5e7eb;
+    transition:0.3s;
+}
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#60a5fa;
+    transition:0.3s;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+.nav-links a:hover,
+.nav-links a.active{
+    color:#60a5fa;
+}
+
+header{
+    height:100vh;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top:80px;
+}
+.hero-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid #60a5fa;
+    margin-bottom:20px;
+    animation:float 4s ease-in-out infinite;
+}
+header h1{
+    font-size:50px;
+    animation:slideDown 1.5s;
+}
+header p{
+    font-size:20px;
+    margin-top:10px;
+    animation:fadeUp 2s;
+}
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:#60a5fa;
+    color:#020617;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.4s;
+}
+.btn:hover{
+    transform:scale(1.1);
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:90px 20px;
+}
+h2{
+    color:#60a5fa;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#111827;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.6s;
+}
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+.card:hover{
+    transform:scale(1.03);
+}
+
+.about-box{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.about-box img{
+    width:200px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(96,165,250,0.4);
+}
+
+.skills span{
+    display:inline-block;
+    padding:8px 15px;
+    margin:6px;
+    border-radius:20px;
+    background:#1e40af;
+    transition:0.4s;
+}
+.skills span:hover{
+    background:#60a5fa;
+    color:#020617;
+    transform:translateY(-5px);
+}
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:20px;
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-50px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+@keyframes fadeUp{
+    from{transform:translateY(40px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Faiz.</div>
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <div>
+        <img src="Image.jpeg" class="hero-img" alt="Faiz Ahmad">
+        <h1>Faiz Ahmad</h1>
+        <p>B.Tech AI & ML Student | Web Developer</p>
+        <a href="#about" class="btn">Explore</a>
+    </div>
+</header>
+
+<section id="about">
+    <div class="card">
+        <h2>About Me</h2>
+        <div class="about-box">
+            <img src="Image.jpeg" alt="Faiz Ahmad">
+            <p>
+                I am a 1st year B.Tech student at Rungta International Skills University,
+                passionate about Web Development and modern technologies.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Education</h2>
+        <p><b>B.Tech (AI & ML)</b><br>Rungta International Skills University</p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Web Development</span>
+            <span>Problem Solving</span>
+            <span>Logical Thinking</span>
+            <span>Quick Learner</span>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="card">
+        <h2>Projects</h2>
+        <p>
+            <strong>Personal Portfolio Website</strong><br><br>
+            I have designed and developed my personal portfolio website using
+            <b>HTML, CSS, and JavaScript</b> with animations and modern UI.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:faiz.ahmad@rungta.org" style="color:#60a5fa;">faiz.ahmad@rungta.org</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Faiz Ahmad | Portfolio</p>
+</footer>
+
+<script>
+const cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+    cards.forEach(card=>{
+        if(card.getBoundingClientRect().top < window.innerHeight-100){
+            card.classList.add("show");
+        }
+    });
+});
+
+const sections=document.querySelectorAll("section, header");
+const links=document.querySelectorAll(".nav-links a");
+window.addEventListener("scroll",()=>{
+    let current="";
+    sections.forEach(sec=>{
+        if(scrollY>=sec.offsetTop-150){
+            current=sec.getAttribute("id");
+        }
+    });
+    links.forEach(a=>{
+        a.classList.remove("active");
+        if(a.getAttribute("href")==="#"+current){
+            a.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-Digit Armstrong Numbers</title>
+</head>
+<body>
+    <h2>3-Digit Armstrong Numbers</h2>
+    <p id="result"></p>
+
+    <script>
+        let armstrongNumbers = [];
+
+        for (let num = 100; num <= 999; num++) {
+            let temp = num;
+            let sum = 0;
+
+            while (temp > 0) {
+                let digit = temp % 10;
+                sum += digit ** 3;
+                temp = Math.floor(temp / 10);
+            }
+
+            if (sum === num) {
+                armstrongNumbers.push(num);
+            }
+        }
+
+        document.getElementById("result").innerHTML =
+            "Armstrong Numbers: " + armstrongNumbers.join(", ");
+    </script>
+</body>
+</html>
